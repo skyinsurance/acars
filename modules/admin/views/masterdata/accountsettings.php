@@ -1,5 +1,9 @@
 <script type="text/javascript">
 	$(document).ready(function(){
+		$("#admin_master_data").addClass("active");
+	 $("#admin_master_data_tree").addClass("open");
+	 $("#admin_account_settings").addClass("active");
+	 
 			    $('#exampleAccountsettings').DataTable({
 
 			    	"aoColumnDefs": [
@@ -19,7 +23,10 @@
 			    });
 			});
 </script>
-
+<?php 
+use yii\widgets\ActiveForm;
+use yii\helpers\Html;
+?>
 <div class="box box-warning">
             <div class="box-header with-border">
               <h3 class="box-title">Settings</h3>
@@ -60,48 +67,14 @@
 							<tr>
 
 								<td>1</td>
-								<td>Emails</td>
+								<td><?php echo Html::encode($name);?></td>
 								<td>Please specify the mail id that you want it to be "from mail" in sent mails.</td>
-							    <td>admin@acars.com</td>
+							    <td><?php echo Html::encode($value);?></td>
 							    
-							    <td><input type="text" class="form-control" id="changed" value=""/>
+							    <td><input type="text" class="form-control" id="changed_value" maxlength="60" value=""/>
 									</td>
 									
-								<td><i class="fa fa-save" style="cursor: pointer;"></i></td>
-								 
-							</tr>
-							
-					
-						<tr>
-
-								<td>2</td>
-								<td>Accounts</td>
-								<td>Please specify the mail id that you want it to be "from mail" in sent mails.</td>
-							    <td>admin@acars.com</td>
-							    
-							    <td><input type="text" class="form-control"  style="margin-bottom: 5px;" id="craig-user" placeholder="Username"> 
-									<input type="text" class="form-control" id="craig-password" placeholder="Password">
-									<label id="error-msg-2" class="red" style="float: left;"></label>	
-									</td>
-									
-								<td><i class="fa fa-save" style="cursor: pointer;"></i></td>
-								 
-							</tr>
-							
-					
-							
-							
-								<tr>
-
-								<td>3</td>
-								<td>Support Details</td>
-								<td>Please specify the mail id that you want it to be "from mail" in sent mails.</td>
-							    <td>admin@acars.com</td>
-							    
-							    <td><textarea class="form-control" rows="7" cols="10" id="changed_id_" maxlength="500"></textarea>
-									</td>
-									
-								<td><i class="fa fa-save" style="cursor: pointer;"></i></td>
+								<td><i class="fa fa-save" style="cursor: pointer;" onclick="Updateaccountsetting(<?php echo $setting_id;?>);"></i></td>
 								 
 							</tr>
 																				
@@ -116,64 +89,6 @@
 	</div>
 </div>
 
-<script type="text/javascript">
-function agencySearch(){
-
-
-	url='/admin/agency?filter=on';
-
-	var filter_keyword =document.getElementById('filter_keyword').value;
-	
-	if (filter_keyword) {
-		url += '&keyword='+ encodeURIComponent(filter_keyword);
-	}
-
-	var filter_status =document.getElementById('filter_status').value;
-	
-	if (filter_status !=0) {
-		url += '&status=' + encodeURIComponent(filter_status);
-	}
-
-	var filter_package =document.getElementById('package').value;
-	
-	if (filter_package !=0) {
-		url += '&package=' + encodeURIComponent(filter_package);
-	}
-	
-
-	 var selects = document.getElementById("filter_pages");
-	 var selected = document.getElementById("filter_pages").value;
-	 
-//	 var Value = selects.options[selects.selectedIndex].value;// will gives u
-	 // value
-
-	 var selectedText = selects.options[selects.selectedIndex].text;
-//	 var selectedValue = selects.options[selected.selectedValue].value;
-	 var filter_count = selectedText;
-	 var filter_value = selected;
-		
-	 if (filter_count) {
-			url += '&filter_pages=' + encodeURIComponent(filter_count);
-	}
-	 if (filter_value) {
-			url += '&filter_value=' + encodeURIComponent(filter_value);
-	}	
-	
-	location=url;
-
-}
-
-function clearGrid()
-{
-	url='/admin/agency';
-	location=url;
-	
-}
-
-
-
-
-</script>
 		</div>
             
                         </div>

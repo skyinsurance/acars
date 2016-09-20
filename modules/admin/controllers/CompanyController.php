@@ -3,6 +3,9 @@
 namespace app\modules\admin\controllers;
 
 use yii\web\Controller;
+use app\models\TblAcaCompanies;
+use app\models\TblAcaCompaniesSearch;
+use yii\db\Query;
 
 /**
  * Default controller for the `admin` module
@@ -15,8 +18,39 @@ class CompanyController extends Controller
      */
     public function actionIndex()
     {
+		\Yii::$app->view->title = 'ACA Reporting Service | Manage Companies';
+		$session = \Yii::$app->session;
+		$admin_permissions = $session ['admin_permissions'];
+    	if (\Yii::$app->SessionCheck->isLogged () == true && in_array("4", $admin_permissions)) 		// checking logged session
+    	{
+			/*if(\Yii::$app->Permission->CheckAdminactionpermission ( '4' ) == true)
+                  {*/
     	$this->layout='main';
-        return $this->render('index');
+    	$model_companies = new TblAcaCompanies();              //initialising model
+		$searchModel = new TblAcaCompaniesSearch();
+		
+    	$all_companies = $model_companies->Findallcompanies();      //finding all companies
+		
+        $dataProvider = $searchModel->search(\Yii::$app->request->queryParams); //dataProvider for grid 
+		
+        return $this->render('index', [                       //render values to index view
+					'all_companies' => $all_companies,
+					'dataProvider'=>$dataProvider,
+					'searchModel'=>$searchModel,
+			] );
+			
+			/* }else{
+					\Yii::$app->session->setFlash ( 'error', 'Permission denied' );
+							return $this->redirect ( array (
+									'/admin' 
+							) );  
+				  }*/
+				  
+        } else {
+        	\Yii::$app->SessionCheck->adminlogout ();        // Redirecting to home page if session destroyed
+        		
+        	return $this->goHome ();
+        }
     }
 	
     public function actionAddform()
@@ -25,6 +59,43 @@ class CompanyController extends Controller
     	return $this->render('addform');
     }
     
+	/**
+	 * Action for updating the status of lookupoptions
+	 */
+	public function actionStatuschange()
+    {
+       $post=\Yii::$app->request->post (); 
+        if(!empty($post))	{                                 //checking the values for post
+		$id = $post ['id'];
+		$statusid = $post ['statusid'];
+		$transaction = \Yii::$app->db->beginTransaction ();      // begining the transaction
+		try {
+			$model=TblAcaCompanies::Companyuniquedetails($id);      //finding unique details of a company
+			
+				$model->reporting_status = strip_tags($statusid);
+			
+			
+			if ($model->save () && $model->validate ())           // validating model and saving it(server side validation)
+
+			{
+				echo 'success';                                //sending response to ajax
+				$transaction->commit ();                       // commiting the transaction
+			} else {
+				
+				echo 'fail';                                   //sending response to ajax
+			}
+		} catch ( Exception $e ) {                          // catching the exception
+			
+			$msg = $e->getMessage ();
+			\Yii::$app->session->setFlash ( 'error', $msg );
+    		 
+    		$transaction->rollback ();                    //if exception occurs transaction rollbacks
+    	}
+	}else{
+		echo 'fail';
+	}
+    }
+	
     public function actionEditform()
     {
     	$this->layout='main';

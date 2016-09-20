@@ -283,3 +283,44 @@ element.style {
     width: 100% !important;
     z-index: 1!important;
 	}
+	
+	#noscript-warning {
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    color: #FFF;
+    background-color: #AE0000;
+    padding: 5px 0 5px 0;
+}
+
+.video-link-header{
+	height:53px;
+}
+
+.load-gif {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 99999;
+}
+.procressing_plz_wait {
+  color: #000;
+  width: 50%;
+  margin: 15% auto;
+  text-align: center;
+  font-size: 17px;
+}
+
+.gif-img-prop{
+	width: 16px;margin-left: 12px;
+}

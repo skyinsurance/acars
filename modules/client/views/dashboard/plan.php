@@ -8,8 +8,8 @@ $(function(){
 
 	if(hash == '#generalplaninformation'){
 		 
-		  $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseOne" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+		  $(".parent-tabs").removeClass('accordian-band-color');
+	$( "#collapseOne" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
   $( "#collapseOne" ).prev().find('.custom-bg').css("color", "white");
 	$( ".panel-collapse" ).removeClass("in");
@@ -24,8 +24,8 @@ $(function(){
 		 
 	        
 			
-	$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseTwo" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseTwo" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
   $( "#collapseTwo" ).prev().find('.custom-bg').css("color", "white");
 	$( ".panel-collapse" ).removeClass("in");
@@ -52,8 +52,8 @@ function benefitNavigation()
 
 	if(hash == '#generalplaninformation'){
 		 
-		  $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseOne" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+		  $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseOne" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
   $( "#collapseOne" ).prev().find('.custom-bg').css("color", "white");
 	$( ".panel-collapse" ).removeClass("in");
@@ -68,8 +68,8 @@ function benefitNavigation()
 		 
 	        
 			
-	$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseTwo" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseTwo" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
   $( "#collapseTwo" ).prev().find('.custom-bg').css("color", "white");
 	$( ".panel-collapse" ).removeClass("in");
@@ -194,8 +194,8 @@ function basic(){
 	$('.fixed-number').css( "display", "block");
 	$("#collapseOne" ).prev().find('.fixed-number').css( "display", "none");
 	
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseTwo" ).prev().css( "background-image","-webkit-linear-gradient(#6394ce,#395fa2)");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseTwo" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
 	$( "#collapseTwo" ).prev().find('.custom-bg').css("color", "white");
 	
@@ -219,8 +219,8 @@ $('.steps').css( "display", "none" );
 
 $('.fixed-number').css( "display", "block");
 
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseOne" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseOne" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
 	$( "#collapseOne" ).prev().find('.custom-bg').css("color", "white");
 	$( ".panel-collapse" ).removeClass("in");
@@ -242,8 +242,8 @@ $('.steps').css( "display", "none" );
 
 $('.fixed-number').css( "display", "block");
 
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseOne" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseOne" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
 	$( "#collapseOne" ).prev().find('.custom-bg').css("color", "white");
 	$( ".panel-collapse" ).removeClass("in");
@@ -278,8 +278,8 @@ $( "#collapseTwo" ).prev().find('.steps').css( "display", "block" );
 	
 	$( "#collapseThree" ).prev().css("opacity", "1");
 	
-$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseThree" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseThree" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
 	$( "#collapseThree" ).prev().find('.custom-bg').css("color", "white");
 	
@@ -301,8 +301,8 @@ $( "#collapseTwo" ).prev().find('.steps').css( "display", "block" );
 	
 	$( "#collapseThree" ).prev().css("opacity", "1");
 	
-$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseThree" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseThree" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
 	$( "#collapseThree" ).prev().find('.custom-bg').css("color", "white");
 	
@@ -322,8 +322,8 @@ function editbasic1(){
 
 	$("#collapseTwo,#collapseThree,#collapseFour,#collapseFive" ).prev().find('.fixed-number').css( "display", "block");
 	
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseTwo" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseTwo" ).prev().addClass("accordian-band-color");
 	$(".custom-bg").css( "color", "" );
 	$( "#collapseTwo" ).prev().find('.custom-bg').css("color", "white");
 	$( ".panel-collapse" ).removeClass("in");
@@ -494,7 +494,7 @@ float: left;
 	<div class="box-header with-border">
               <h3 class="box-title col-xs-6">General Plan Information - ABC Corp <small>(ACA-10000-1)</small></h3>
              <div class="col-xs-6 pull-right">
-			<a class=" btn bg-orange btn-flat btn-social pull-right"> <i
+			<a class=" btn bg-orange btn-flat btn-social pull-right" onclick="playVideo(3);"> <i
 				class="fa fa-youtube-play"></i>View Help Video
 			</a>
 		</div>
@@ -517,7 +517,7 @@ float: left;
               <div class="box-group" id="accordion">
                 <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
                 <div class="panel  box " id="generalplaninformation">
-                  <div class="parent-tabs box-header with-border" style="background-image:-webkit-linear-gradient(#6394ce,#395fa2);">
+                  <div class="parent-tabs box-header with-border accordian-band-color" >
 				  
 				  <span id="step" class="steps col-xs-2" onclick="editbasic();"   >
 <span class="check " style="display:none;" >

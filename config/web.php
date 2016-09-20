@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT);
 
 $params = require(__DIR__ . '/params.php');
 
@@ -44,15 +45,37 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'rIPgnCtyzI7Ct8IOF9lUQCemM4hBaF3R',
-		//	'enableCookieValidation' => false,
-     //   'enableCsrfValidation' => false
+			'enableCookieValidation' => true,
+            'enableCsrfValidation' => true
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'user' => [
+        'SessionCheck' => [
+        'class' => 'app\components\SessionCheckComponent',
+        ],
+        
+        'CustomMail' => [
+        'class' => 'app\components\MailComponent',
+        ],
+        'Permission' => [
+        'class' => 'app\components\PermissionComponent',
+        ],
+		'Sharefile' => [
+        'class' => 'app\components\SharefileComponent',
+        ],
+		'EncryptDecrypt' => [
+        'class' => 'app\components\EncryptDecryptComponent',
+        ],
+		'Rightsignature' => [
+        'class' => 'app\components\RightsignatureComponent',
+        ],
+        
+        'user'
+        		 => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+			'authTimeout' => 30, //Seconds
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -62,7 +85,7 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -73,13 +96,17 @@ $config = [
                 ],
             ],
         ],
-       // 'db' => require(__DIR__ . '/db.php'),
+        'db' => require(__DIR__ . '/db.php'),
         
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            '<alias:index|about|contact|login|verification|sendchangemail|resetpassword>' => 'site/<alias>',
+            '<controller:\w+>/<id:\d+>' => '<controller>/view',
+            '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+            '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+            '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
+            '<alias:index|about|contact|login|logout|setaccount|adminlogout|clientlogout|shadowlogin|forgotpassword|verification|sendchangemail|resetpassword>' => 'site/<alias>',
             ],
         ],
         

@@ -299,10 +299,10 @@ $(function(){
 		 
 	        
 			
-	$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseTwo" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseTwo" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseTwo" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseTwo" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	
@@ -316,10 +316,10 @@ $(function(){
 		 // $('#basic_btn_1').trigger('click');
 		 // $('#basic_btn_2').trigger('click');
 		 
-		 $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseThree" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseThree" ).prev().find('.custom-bg').css("color", "white");
+		 $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseThree" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseThree" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 		 $("#collapseThree").addClass( "in" );
@@ -331,10 +331,10 @@ $(function(){
 		//  $('#basic_btn_1').trigger('click');
 		//  $('#basic_btn_2').trigger('click');
 		//  $('#basic_btn_3').trigger('click');
-		 $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseFour" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseFour" ).prev().find('.custom-bg').css("color", "white");
+		 $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseFour" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseFour" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 		 $("#collapseFour").addClass( "in" );
 		   $('html, body').animate({ scrollTop: $(hash).offset().top -156  }); 
@@ -346,10 +346,10 @@ $(function(){
 		//  $('#basic_btn_2').trigger('click');
 		//  $('#basic_btn_3').trigger('click');
 		//  $('#basic_btn_4').trigger('click');
-		 $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseFive" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseFive" ).prev().find('.custom-bg').css("color", "white");
+		 $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseFive" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseFive" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 		 $("#collapseFive").addClass( "in" );
 		   $('html, body').animate({ scrollTop: $(hash).offset().top -166  }); 
@@ -363,10 +363,10 @@ $(function(){
 		//  $('#basic_btn_4').trigger('click');
 	//	  $('#basic_btn_5').trigger('click');
 	
-	 $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseSix" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseSix" ).prev().find('.custom-bg').css("color", "white");
+	 $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseSix" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseSix" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	$("#collapseSix").addClass( "in" );
@@ -389,10 +389,10 @@ function leftNavigation(){
 	  $('.basic_info_menu').removeClass('active');
 	  if(hash == '#basicinformation'){
 		 
-		  $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseOne" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseOne" ).prev().find('.custom-bg').css("color", "white");
+		  $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseOne" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseOne" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 		 $("#collapseOne").addClass( "in" );
@@ -405,10 +405,10 @@ function leftNavigation(){
 		 
 	        
 			
-	$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseTwo" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseTwo" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseTwo" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseTwo" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	
@@ -423,10 +423,10 @@ function leftNavigation(){
 		 // $('#basic_btn_1').trigger('click');
 		 // $('#basic_btn_2').trigger('click');
 		 
-		 $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseThree" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseThree" ).prev().find('.custom-bg').css("color", "white");
+		 $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseThree" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseThree" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 		 $("#collapseThree").addClass( "in" );
@@ -439,10 +439,10 @@ function leftNavigation(){
 		//  $('#basic_btn_1').trigger('click');
 		//  $('#basic_btn_2').trigger('click');
 		//  $('#basic_btn_3').trigger('click');
-		 $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseFour" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseFour" ).prev().find('.custom-bg').css("color", "white");
+		 $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseFour" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseFour" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 		 $("#collapseFour").addClass( "in" );
 		   $('html, body').animate({ scrollTop: $(hash).offset().top -156  }); 
@@ -455,10 +455,10 @@ function leftNavigation(){
 		//  $('#basic_btn_2').trigger('click');
 		//  $('#basic_btn_3').trigger('click');
 		//  $('#basic_btn_4').trigger('click');
-		 $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseFive" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseFive" ).prev().find('.custom-bg').css("color", "white");
+		 $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseFive" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseFive" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 		 $("#collapseFive").addClass( "in" );
 		   $('html, body').animate({ scrollTop: $(hash).offset().top -166  }); 
@@ -473,10 +473,10 @@ function leftNavigation(){
 		//  $('#basic_btn_4').trigger('click');
 	//	  $('#basic_btn_5').trigger('click');
 	
-	 $(".parent-tabs").css( "background-image", "" );
-	$( "#collapseSix" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-    $( "#collapseSix" ).prev().find('.custom-bg').css("color", "white");
+	 $(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseSix" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+    $( "#collapseSix" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	$("#collapseSix").addClass( "in" );
@@ -635,10 +635,10 @@ function basic(){
 	$('.fixed-number').css( "display", "block");
 	$("#collapseOne" ).prev().find('.fixed-number').css( "display", "none");
 	
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseTwo" ).prev().css( "background-image","-webkit-linear-gradient(#6394ce,#395fa2)");
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseTwo" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseTwo" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseTwo" ).prev().find('.custom-bg').addClass("white");
 	
 	
 	$( "#collapseTwo,#collapseOne" ).prev().css("opacity", "1");
@@ -661,10 +661,10 @@ $('.steps').css( "display", "none" );
 
 $('.fixed-number').css( "display", "block");
 
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseOne" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseOne" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseOne" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseOne" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	$("#collapseOne").addClass("in");
@@ -688,10 +688,10 @@ $( "#collapseTwo" ).prev().find('.steps').css( "display", "block" );
 	
 	$( "#collapseThree" ).prev().css("opacity", "1");
 	
-$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseThree" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseThree" ).prev().find('.custom-bg').css("color", "white");
+$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseThree" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseThree" ).prev().find('.custom-bg').addClass("white");
 	
 	$("#collapseThree").addClass( "in" );
 	$("#collapseThree").css("height","auto");
@@ -711,10 +711,10 @@ function editbasic1(){
 
 	$("#collapseTwo,#collapseThree,#collapseFour,#collapseFive" ).prev().find('.fixed-number').css( "display", "block");
 	
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseTwo" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseTwo" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseTwo" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseTwo" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	$("#collapseTwo").addClass("in");
@@ -738,10 +738,10 @@ $( "#collapseThree" ).prev().find('.steps').css( "display", "block" );
 
 	$( "#collapseFour" ).prev().css("opacity", "1");
 	
-	$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseFour" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseFour" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseFour" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseFour" ).prev().find('.custom-bg').addClass("white");
 	
 	$("#collapseFour").addClass( "in" );
 	$("#collapseFour").css("height","auto");
@@ -761,10 +761,10 @@ function editbasic2(){
 
 	$("#collapseThree,#collapseFour,#collapseFive" ).prev().find('.fixed-number').css( "display", "block");
 	
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseThree" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseThree" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseThree" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseThree" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	$("#collapseThree").addClass("in");
@@ -787,10 +787,10 @@ function basic3(){
 	
 	$( "#collapseFive" ).prev().css("opacity", "1");
 	
-$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseFive" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseFive" ).prev().find('.custom-bg').css("color", "white");
+$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseFive" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseFive" ).prev().find('.custom-bg').addClass("white");
 	
 	$("#collapseFive").removeClass( "collapsed" );
 	$("#collapseFive").addClass( "in" );
@@ -809,10 +809,10 @@ function editbasic3(){
 	$("#collapseFour,#collapseFive" ).prev().find('.fixed-number').css( "display", "block");
 	
 	
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseFour" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseFour" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseFour" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseFour" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	$("#collapseFour").addClass("in");
@@ -834,10 +834,10 @@ function basic4(){
 	
 	$( "#collapseSix" ).prev().css("opacity", "1");
 	
-$(".parent-tabs").css( "background-image", "" );
-	$( "#collapseSix" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseSix" ).prev().find('.custom-bg').css("color", "white");
+$(".parent-tabs").removeClass("accordian-band-color");
+	$( "#collapseSix" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseSix" ).prev().find('.custom-bg').addClass("white");
 	
 	$("#collapseSix").addClass( "in" );
 	$("#collapseSix").css("height","auto");
@@ -854,10 +854,10 @@ function editbasic4(){
 
 	$("#collapseFive" ).prev().find('.fixed-number').css( "display", "block");
 
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseFive" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseFive" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseFive" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseFive" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	$("#collapseFive").addClass("in");
@@ -877,8 +877,8 @@ function basic5(){
 	
 $(".parent-tabs").css( "background-image", "" );
 	$( "#collapseSix" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseSix" ).prev().find('.custom-bg').css("color", "white");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseSix" ).prev().find('.custom-bg').addClass("white");
 	
 	$("#collapseSix").addClass( "in" );
 	$("#collapseSix").css("height","auto");
@@ -894,10 +894,10 @@ function editbasic5(){
 	$("#collapseSix" ).prev().find('.fixed-number').css( "display", "block");
 
 	
-	$(".parent-tabs").css( "background-image", "" );
-	$("#collapseSix" ).prev().css( "background-image", "-webkit-linear-gradient(#6394ce,#395fa2)" );
-	$(".custom-bg").css( "color", "" );
-	$( "#collapseSix" ).prev().find('.custom-bg').css("color", "white");
+	$(".parent-tabs").removeClass("accordian-band-color");
+	$("#collapseSix" ).prev().addClass("accordian-band-color");
+	$(".custom-bg").removeClass("white");
+	$( "#collapseSix" ).prev().find('.custom-bg').addClass("white");
 	$( ".panel-collapse" ).removeClass("in");
 	
 	$("#collapseSix").addClass("in");
@@ -1022,7 +1022,7 @@ float: left;
 	<div class="box-header with-border">
               <h3 class="box-title col-xs-6">Basic Reporting Information - ABC Corp <small>(ACA-10000-1)</small></h3>
              <div class="col-xs-6 pull-right">
-			<a class=" btn bg-orange btn-flat btn-social pull-right"> <i
+			<a class=" btn bg-orange btn-flat btn-social pull-right" onclick="playVideo(3);"> <i
 				class="fa fa-youtube-play"></i>View Help Video
 			</a>
 		</div>
@@ -1045,7 +1045,7 @@ float: left;
               <div class="box-group" id="accordion">
                 <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
                 <div class="panel  box " id="basicinformation">
-                  <div class="parent-tabs box-header with-border" style="background-image:-webkit-linear-gradient(#6394ce,#395fa2);">
+                  <div class="parent-tabs box-header with-border accordian-band-color">
 				  
 				  <span id="step" class="steps col-xs-2" onclick="editbasic();"   >
 <span class="check " style="display:none;" >
@@ -1058,14 +1058,14 @@ float: left;
 					<div class="fixed-number col-md-1 col-xs-2" style="top: 3px;">
 						<span class="block-number">1</span>
 						</div>	
-                      <a  class="custom-bg col-md-11 col-xs-10" data-parent="#accordion" onclick="editbasic();" style="color:white; padding-left: 0;" >
+                      <a  class="custom-bg col-md-11 col-xs-10 white" data-parent="#accordion" onclick="editbasic();" style="padding-left: 0;" >
 
 					 Basic Information
                       </a>
                     </h4>
 					
 					<div class="box-title col-xs-3 pull-right" style="padding-top: 7px;">
-					<p class="custom-bg summary-text pull-right" style="font-size: 12px; color:white; ">
+					<p class="custom-bg summary-text pull-right white" style="font-size: 12px; ">
 					Provide employer information
 					</p>
 					</div>

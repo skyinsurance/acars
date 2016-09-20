@@ -1,7 +1,16 @@
+<script type="text/javascript">
+$(document).ready(function(){
+	 $("#admin_users").addClass("active");
+});
+</script>
 
+<?php
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+?>
 <div class=" box box-warning container-fluid">
   <div class="box-header with-border">
-              <h3 class="box-title">Assign Permissions to Praveen</h3>
+              <h3 class="box-title">Assign Permissions to <?php echo $staff_name;?></h3>
 			  	<span style="float:right;"><a href="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/admin/users/index">Back to Manage Users</a></span>
 	
             </div>
@@ -13,7 +22,8 @@
 	<div class="col-md-12">
 		<div class=" box-info">
 
-			<form class="form-horizontal" style="margin-left: 33px;">
+			<?php $form = ActiveForm::begin(['options' => ['enctype'=>'multipart/form-data','class'=>'form-horizontal']]); ?>
+		
 				<div class="box-body">
 				
 
@@ -33,58 +43,18 @@
 		<tbody>
 		         <tr>
 				<td style="text-align: center;"><input type="checkbox" id="selectall" ></td>
-				<td><span id="changeText">Select All</span> </td>
+				<td><span id="changeText">Administrator</span> </td>
 			     </tr>
 
-				<tr>
-				<td style="text-align: center;"><input type="checkbox" class="checkbox1" checked name="permission_id[1]" value="1"  ></td>
-				<td>Dashboard				
-				</td>
-		      	</tr>					
-
-				
-				<tr>
-				<td style="text-align: center;"><input type="checkbox" class="checkbox1" checked name="permission_id[3]" value="3"  ></td>
-				<td>Reports				
-				</td>
-			    </tr>					
-					
-				<tr>
-				<td style="text-align: center;"><input type="checkbox" class="checkbox1" name="permission_id[6]" value="6"  ></td>
-				<td>Tracking code				
-				</td>
-		    	</tr>					
-
-				<tr>
-				<td style="text-align: center;"><input type="checkbox" class="checkbox1" checked name="permission_id[7]" value="7"  ></td>
-				<td>Landing Pages				
-				</td>
-		    	</tr>					
-
-				
-				<tr>
-				<td style="text-align: center;"><input type="checkbox" class="checkbox1" name="permission_id[9]" value="9"  ></td>
-				<td>Manage Subscription				
-				</td>
-			    </tr>					
-
-				<tr>
-				<td style="text-align: center;"><input type="checkbox" class="checkbox1" name="permission_id[10]" value="10"  ></td>
-				<td>Administration				
-				</td>
-			    </tr>					
-
-			    <tr>
-				<td style="text-align: center;"><input type="checkbox" class="checkbox1" name="permission_id[10]" value="10"  ></td>
-				<td>Manage Brand				
-				</td>
-			    </tr>
-			    
-				<tr>
-				<td style="text-align: center;"><input type="checkbox" class="checkbox1" name="permission_id[11]" value="11"  ></td>
-				<td>Message Center				
-				</td>
-			    </tr>					
+				<?php if(!empty($staff_rights_details)) {
+					foreach($staff_rights_details as $rights){
+						?>
+					<tr>
+						<td style="text-align: center;"><input type="checkbox"
+							class="permission_check" value="<?php echo $rights->staff_permission_id; ?>" name="staffpermissions[]" <?php if(!empty($staff_permissions_details)) if(in_array($rights->staff_permission_id,$staff_permissions_details)) {?>checked<?php }?>></td>
+						<td><span ><?php echo $rights->permission_name; ?></span></td>
+					</tr>
+					<?php } } ?>					
 
 								
 			</tbody>
@@ -106,7 +76,7 @@
 				</div>
 				</div>
 				<!-- /.box-footer -->
-			</form>
+			<?php ActiveForm::end(); ?>
 		</div>
 	</div>
 </div>

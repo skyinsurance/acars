@@ -413,7 +413,7 @@ ol>li.btn-lg>span {
 	<div class="box-header with-border ">
               <h3 class="box-title col-xs-6">Update Plan Class (1) - ABC Corp <small>(ACA-10000-1)</small></h3>
              <div class="col-xs-6 pull-right">
-			<a class=" btn bg-orange btn-flat btn-social pull-right"> <i
+			<a class=" btn bg-orange btn-flat btn-social pull-right"  onclick="playVideo(3);"> <i
 				class="fa fa-youtube-play"></i>View Help Video
 			</a>
 		</div>

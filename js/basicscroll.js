@@ -24,6 +24,51 @@ $(document).ready(function(){
 		 
 		 leftNavigation();
 		  // now scroll to element with that id
+		 
+		 
+		
+		  
+	}); 
+	
+	 $('#selectall').click(function(){
+			var select = $("#selectall").is(":checked");
+			if(select)
+				{
+				$('.permission_check').prop('checked', true);
+				$('.permission_check').css("pointer-events", "none");
+				}
+			else
+				{
+				$('.permission_check').prop('checked', false);
+				$('.permission_check').css("pointer-events", "auto");
+				}
+			 
+		 });
+	
+	 $('#select_all_0').click(function(){
+			var select = $("#select_all_0").is(":checked");
+			if(select)
+				{
+				 $('#select_all_0').removeClass('permission_check');
+				$('.permission_check').prop('checked', true);
+				$('.permission_check').css("pointer-events", "none");
+				}
+			else
+				{
+				$('.permission_check').prop('checked', false);
+				$('.permission_check').css("pointer-events", "auto");
+				}
+			 
+		 });
+	
+	$('.benefit_plan_info').click(function(){
+		$url = $(this).find('a').attr("href");
+		var res = $url.split("#");
+		 var hash = '#'+res[1];
+		 window.location.hash = hash;
+		 
+		 benefitNavigation();
+		  // now scroll to element with that id
 		  
 	});
 	

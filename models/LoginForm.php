@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\base\Model;
+use yii\web\IdentityInterface;
 
 /**
  * LoginForm is the model behind the login form.
@@ -46,10 +47,38 @@ class LoginForm extends Model
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
+			
+			if(!$user)
+			{
+			$this->addError('username', 'Incorrect Email');	
+			}
+			else
+			{
+			if($user->is_active == 0)
+			{
+				
+			$this->addError('password', 'User is Inactive. Please contact administrator.');	
+			}
+			
+			elseif($user->is_deleted == 1)
+			{
+			
+				$this->addError('password', 'User does not exists');
+			}
+			elseif($user->is_verified == 0)
+			{
+					
+				$this->addError('password', 'Please verify your email');
+			}
+			
+			
+            elseif (!$user->validatePassword($this->password)) {
+				
 
-            if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Incorrect username or password.');
+			$this->addError('password', 'Incorrect password');
+				
             }
+		}
         }
     }
 
@@ -58,9 +87,23 @@ class LoginForm extends Model
      * @return boolean whether the user is logged in successfully
      */
     public function login()
-    {
+    {	
+    	
         if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600*24*30 : 0);
+        	
+        	$session = \Yii::$app->session;
+        	$session['logged_username'] = $this->getUser()->attributes['useremail'];
+        	$session['logged_usertype']= $this->getUser()->attributes['usertype'];
+        	$session['logged_id']= $this->getUser()->attributes['user_id'];
+        	$session->set('logged_status', true);
+        	
+        	if($session['logged_usertype'] == 1)
+        	{
+        	$permissions = \Yii::$app->Permission->getloggeduserpermission($session['logged_id']);
+        	$session['logged_permissions']=$permissions;
+        	}
+        	
+            return true;
         }
         return false;
     }
@@ -73,9 +116,10 @@ class LoginForm extends Model
     public function getUser()
     {
         if ($this->_user === false) {
-            $this->_user = User::findByUsername($this->username);
+            $this->_user = TblAcaUsers::findByUsername($this->username);
         }
-
         return $this->_user;
     }
+    
+    
 }

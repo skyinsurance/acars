@@ -1,1 +1,0 @@
-<img src="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/Images/dashboard1.PNG" >

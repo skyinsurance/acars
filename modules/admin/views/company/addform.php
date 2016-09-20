@@ -1,11 +1,5 @@
-	<style>
-	.header-new-main {
-	margin-bottom:0px;
-	}
-	.form-height{
-    height: 42px;
-	}
-	</style>
+	  
+	  <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/admin/companies.css" rel="stylesheet">
 	<div class=" box box-warning container-fluid">
 	
 	         <div class="box-header with-border">

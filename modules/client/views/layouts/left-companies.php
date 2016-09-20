@@ -1,8 +1,5 @@
 <style>
-.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a
-{
-	border-left-color: #1E282C !important;
-}
+
 </style>
 
 <aside class="main-sidebar">

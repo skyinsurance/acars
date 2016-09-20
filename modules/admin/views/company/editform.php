@@ -1,11 +1,4 @@
-	<style>
-	.header-new-main {
-	margin-bottom:0px;
-	}
-	.form-height{
-    height: 42px;
-	}
-	</style>
+  <link href="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/admin/companies.css" rel="stylesheet">
 	<div class=" box box-warning container-fluid">
 	
 	         <div class="box-header with-border">
@@ -23,7 +16,7 @@
           
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal" style="margin-left: 33px;">
+            <form class="form-horizontal marginleft" >
               <div class="box-body">
                 
                 <div class="form-group">
@@ -71,7 +64,7 @@
                 </div>
                 
                             
-                <div class="form-group" style="    margin-top: 10px;">
+                <div class="form-group margintop" >
                 <div class="col-sm-6">
              <div class="pull-right" >
                 

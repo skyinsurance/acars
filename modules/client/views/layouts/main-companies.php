@@ -68,16 +68,35 @@ if (Yii::$app->controller->action->id === 'login') {
 <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/js/input-mask/jquery.inputmask.extensions.js"></script>
 
 <script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/js/customfunctions.js"></script>
+<script src="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/js/validation.js"></script>
   <link
  href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"
  rel="stylesheet">
  
 <script type="text/javascript"
  src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+ 
+	<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+<script>
+
+	$(function() {
+		$("[data-mask]").inputmask();
+	});
+</script>
 	
 <!-- jQuery 2.1.4 -->
-
+<div id="pswd_info">
+								<h4>Suggested Password Combinations:</h4>
+								<ul style="list-style: none;">
+									<li id="letter" class="invalid">At least <strong>one letter</strong></li>
+									<li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+									<li id="number" class="invalid">At least <strong>one number</strong></li>
+									<li id="specialchar" class="invalid">At least <strong>one special character</strong></li>
+									<li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+								</ul>
+							</div>
 
     </body>
     </html>
