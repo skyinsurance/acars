@@ -12,6 +12,8 @@ use app\models\TblAcaMedicalEmploymentPeriod;
 use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\UploadedFile;
+use app\models\TblAcaSharefileFolders;
+use app\models\TblAcaSharefileEmployees;
 
 class MedicalController extends Controller
 {
@@ -646,6 +648,8 @@ class MedicalController extends Controller
 		$session = \Yii::$app->session;
 		
 		if (\Yii::$app->SessionCheck->isclientLogged () == true) { // checking logged session
+		
+			$logged_user_id = $session ['client_user_id'];
 			
 			if (isset ( $_GET ['c_id'] ) && $_GET ['c_id'] != '') {
 				$company_id = EncryptDecryptComponent::decryptUser ( $_GET ['c_id'] );
@@ -748,7 +752,7 @@ class MedicalController extends Controller
 							);
 							
 							
-							echo 'Upload in process please wait.';
+							echo 'Upload in process please wait.'; 
 							
 							$values = [ 
 									"first_name",
@@ -814,8 +818,8 @@ class MedicalController extends Controller
 												
 											}
 											
-											echo "<pre/>";
-											print_r($record_exist); 
+											//echo "<pre/>";
+											//print_r($record_exist); 
 											// check for duplicate entry
 											if(empty($record_exist['employee_id']) && $ssn!=''){
 											// from session
@@ -1007,11 +1011,40 @@ class MedicalController extends Controller
 								//  die();
 								// echo $x; die();
 								if ($x > 0 || $y > 0) {
+									
+									/****** upload the document into sharefile ********/
+									
+									/******* getting the sharefile credentials ******/
+									$share_file = json_decode(file_get_contents(getcwd().'/config/sharefile-credentials.json'));
+																
+									$hostname = $share_file->hostname;
+									$client_api_id = $share_file->client_api_id;
+									$client_secret = $share_file->client_secret;
+									
+									/******* getting the sharefile folder details based on comapny id ******/			
+									$folder_details = TblAcaSharefileFolders::find()->where(['company_id' => $company_id])->One();
+									if(!empty($folder_details)){
+										$sharefile_folder_id = $folder_details->sharefile_folder_id;
+									}
+									
+									/******* getting the sharefile login details based on logged id ******/			
+									$sharefile_details = TblAcaSharefileEmployees::find()->where(['user_id' => $logged_user_id])->One();
+									if(!empty($sharefile_details)){
+										$new_username = $sharefile_details->username;
+										$enc_password = $sharefile_details->password;
+										$new_password = \Yii::$app->EncryptDecrypt->decryptUser($enc_password);
+										$client_logged_id = $sharefile_details->user_id;
+									
+										$local_path =  getcwd () . '/files/csv/' . $folder_name . '/' . $fileName1 ;
+										$result = \Yii::$app->Sharefile->upload_file($hostname, $client_api_id, $client_secret, $new_username, $new_password, $sharefile_folder_id, $local_path);
+									}
+									
 									$transaction->commit ();
+									
 								}
 							} catch ( \Exception $e ) {
-								print_r ( $e );
-								die ();
+								//print_r ( $e );
+								//die ();
 								$msg = $e->getMessage ();
 								$session = \Yii::$app->session;
 								// assign the message for flash variable
