@@ -1,4 +1,8 @@
-
+<script type="text/javascript">
+$(document).ready(function(){
+	 $("#admin_reports").addClass("active");
+});
+</script>
 <div class="box box-warning container-fluid">
 	
 	<div class="box-header with-border">

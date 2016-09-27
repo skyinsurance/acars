@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* sai */
+
 use yii\helpers\Html;
 
 $this->title = 'About';

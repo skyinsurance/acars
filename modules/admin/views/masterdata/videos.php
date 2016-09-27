@@ -49,7 +49,7 @@
 				
 			<!-- 	<div>
 				<a
-								href="<?php echo Yii::$app->homeUrl;?>admin/company/addform"><button
+								href="<?php //echo Yii::$app->homeUrl;?>admin/company/addform"><button
 										type="reset" class="btn btn-success filter-btn-search pull-right"
 										>
 										<i class="fa fa-plus" aria-hidden="true"

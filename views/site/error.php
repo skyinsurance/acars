@@ -11,6 +11,7 @@ $this->title = $name;
 ?>
 <div class="site-error">
 
+<?php // echo "<pre>"; print_r($this); die(); ?>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <div class="alert alert-danger">

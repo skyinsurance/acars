@@ -1,23 +1,39 @@
 <?php
 use yii\widgets\Breadcrumbs;
 use dmstr\widgets\Alert;
-
+use app\components\EncryptDecryptComponent;
 ?>
 <div class="content-wrapper" style="min-height:1000px;">
     <section class="content-header content-dashboard">
      <div class="">			<div class="row">				
      <div class="col-md-12 no-padding">					
-     <ul class="nav nav-tabs standard-font" >						
-    
+     <ul class="nav nav-tabs standard-font top-navigation" >						
+  <?php 
+	$session = \Yii::$app->session;
+	$logged_user_id = $session ['client_user_id'];
+	
+	$get_company_id = \Yii::$app->request->get ();
+	$encrypt_component = new EncryptDecryptComponent ();
+	if (! empty ( $get_company_id )) {
+		$encrypt_company_id = $get_company_id ['c_id'];
+			if (! empty ( $encrypt_company_id )) {
+			$company_id = $encrypt_component->decryptUser ( $encrypt_company_id );
+			}
+	}
+	?>   
      					
      <li id="companies-menu-id">	
      	<a class="white" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/client/companies">All Companies</a>	
      	</li>	
      	
+		<?php $dashboardpermission = \Yii::$app->Permission->Checkclientpermission($logged_user_id,$company_id,'dashboard');
+		if($dashboardpermission)
+		{
+		?>
      	 <li id="dashboard-menu-id" class="">						
      <a class="white" href="<?php echo Yii::$app->getUrlManager()->getBaseUrl(); ?>/client/dashboard">Company Dashboard</a>		
      				</li>			
- 
+		<?php }?>
      					</ul>			
            </div>		
      								<div class="hide col-md-4">				

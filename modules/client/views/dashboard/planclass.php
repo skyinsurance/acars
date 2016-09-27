@@ -10,7 +10,7 @@
               <h3 class="box-title col-sm-6">Current Available Plan Classes - ABC Corp <small>(ACA-10000-1)</small>
               </h3>
               
-               <a class="col-sm- btn bg-orange btn-flat btn-social pull-right">
+               <a class="col-sm- btn bg-orange btn-flat btn-social pull-right"  onclick="playVideo(3);">
                 <i class="fa fa-youtube-play"></i>View Help Video
               </a>
             </div>
